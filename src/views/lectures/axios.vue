@@ -85,12 +85,10 @@ export default {
     }
   },
   methods: {
-    create () {
-      this.$axios.post('http://localhost:5000/vuefirebase-638e5/us-central1/test')
-        .then(r => {
-          this.textCreate = r.data
-        })
-        .catch(e => console.error(e.message))
+    async create () {
+      this.$toasted.global.error('axios.vue / create()에서 error 발생')
+      const r = await this.$axios.post('http://localhost:5000/vuefirebase-638e5/us-central1/test/wrd')
+      this.textCreate = r.data
     },
     read () {
       this.$axios.get('http://localhost:5000/vuefirebase-638e5/us-central1/test')
