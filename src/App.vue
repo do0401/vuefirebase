@@ -103,6 +103,10 @@ export default {
             {
               title: 'notes',
               to: '/lectures/notes'
+            },
+            {
+              title: 'axios',
+              to: '/lectures/axios'
             }
           ]
         }
