@@ -47,7 +47,7 @@
     </v-navigation-drawer>
     <v-toolbar color="lime">
       <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Title</v-toolbar-title>
+      <v-toolbar-title>{{ $store.state.title }}</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
