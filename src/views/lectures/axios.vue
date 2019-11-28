@@ -86,26 +86,25 @@ export default {
   },
   methods: {
     async create () {
-      this.$toasted.global.error('axios.vue / create()에서 error 발생')
-      const r = await this.$axios.post('http://localhost:5000/vuefirebase-638e5/us-central1/test/wrd')
+      const r = await this.$axios.post('test')
       this.textCreate = r.data
     },
     read () {
-      this.$axios.get('http://localhost:5000/vuefirebase-638e5/us-central1/test')
+      this.$axios.get('test')
         .then(r => {
           this.textRead = r.data
         })
         .catch(e => console.error(e.message))
     },
     update () {
-      this.$axios.put('http://localhost:5000/vuefirebase-638e5/us-central1/test/12345')
+      this.$axios.put('test/12345')
         .then(r => {
           this.textUpdate = r.data
         })
         .catch(e => console.error(e.message))
     },
     del () {
-      this.$axios.delete('http://localhost:5000/vuefirebase-638e5/us-central1/test/444555')
+      this.$axios.delete('test/444555')
         .then(r => {
           this.textDelete = r.data
         })
